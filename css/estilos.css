@@ -1,0 +1,35 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body { 
+     margin-top: 90px;
+     color: #535353;
+     min-height: 1500px;
+}
+
+.contenedor {
+     justify-content: center;
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.header {
+     width: 75%;
+     padding: 40px;
+     background-color: #E9E8E9;
+     text-align: center;
+}
+
+.titulo {
+     font-size: 25px;
+     font-family: sans-serif;
+     font-weight: 100;
+}
+
+.texto-introduccion {
+     font-size: 60px;
+     font-weight: 400;
+}
