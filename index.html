@@ -9,11 +9,31 @@
      <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+     <div class="contenedor-menu" id="contenedor-menu">
+          <p class="btn-abrir-menu" id="btn-abrir-menu">
+               <i class="fas fa-home"></i>
+          </p>
+          <nav class="elementos-navegacion">
+               <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Contacto</a></li>
+               </ul>
+          </nav>
+     </div>
+
      <div class="contenedor">
           <header class="header">
                <h1 class="titulo">Lorem Ipsum</h1>
                <p class="texto-introduccion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, facilis itaque deserunt eos eum incidunt accusantium laudantium iure recusandae delectus.</p>
           </header>
      </div>
+
+     <script>
+          const menu = document.getElementById('btn-abrir-menu');
+          menu.addEventListener('click', () => {
+               document.getElementById('contenedor-menu').classList.toggle('active');
+          });
+     </script>
 </body>
 </html>

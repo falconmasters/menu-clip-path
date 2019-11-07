@@ -33,3 +33,78 @@ body {
      font-size: 60px;
      font-weight: 400;
 }
+
+/* ------------------------- */
+/* Menu de navegacion */
+/* ------------------------- */
+.contenedor-menu {
+     background: #396362;
+     color: #fff;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     z-index: 100;
+     text-align: center;
+     top: 0;
+     clip-path: circle(55px at 50% 0);
+     transition: .7s ease all;
+}
+
+.contenedor-menu.active {
+     clip-path: circle(100% at 50% 0);
+}
+
+.btn-abrir-menu {
+     font-size: 25px;
+     padding: 10px;
+     cursor: pointer;
+}
+
+.btn-abrir-menu:hover {
+     animation: rotar 1.5s alternate;
+}
+
+@keyframes rotar {
+     0% {transform: rotate(0deg);}
+     20% {transform: rotate(10deg);}
+     40% {transform: rotate(-15deg);}
+     60% {transform: rotate(15deg);}
+     80% {transform: rotate(-10deg);}
+     100% {transform: rotate(0deg);}
+}
+
+.elementos-navegacion {
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.elementos-navegacion li {
+     list-style: none;
+     padding-bottom: 20px;
+     margin-bottom: 20px;
+}
+
+.contenedor-menu.active li {
+     animation: desplazamiento 1s ease;
+}
+
+@keyframes desplazamiento {
+     from {transform: translateY(1000px);}
+     to {transform: translateY(0);}
+}
+
+.elementos-navegacion li a {
+     text-decoration: none;
+     font-size: 40px;
+     letter-spacing: 2px;
+     padding: 15px 30px;
+     color: #f8f8f8;
+     text-transform: uppercase;
+     transition: .2s ease all;
+}
+
+.elementos-navegacion li a:hover {
+     background: #000;
+}
